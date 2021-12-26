@@ -11,7 +11,8 @@ import java.io.IOException;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags ="@seach_film"
+        //tags ="@seach_film"
+        tags ="@favoritos"
 )
 
 public class Runner {
@@ -19,13 +20,13 @@ public class Runner {
 
     @BeforeClass
     public static void startAppiumServer() throws IOException {
-       //appiumService = AppiumDriverLocalService.buildDefaultService();
-      // appiumService.start();
+       appiumService = AppiumDriverLocalService.buildDefaultService();
+      //   appiumService.start();
     }
 
     @AfterClass
     public static void stopAppiumServer() {
-       // appiumService.stop();
+     //   appiumService.stop();
     }
 
 }
